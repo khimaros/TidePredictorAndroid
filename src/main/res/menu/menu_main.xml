@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.arachnoid.lutusp.tidepredictor.TidePredictorActivity">
+    <item  android:id="@+id/help_item"
+        android:title="Help"
+        android:icon="@drawable/ic_action_help"
+        app:showAsAction="ifRoom"
+        />
+
+</menu>

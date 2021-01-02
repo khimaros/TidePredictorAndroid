@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawing_canvas_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:background="#e0f0ff"
+    android:padding="0dp"
+    tools:context="com.arachnoid.lutusp.tidepredictor.PlaceHolderFragment">
+
+    <ScrollView
+        android:layout_above="@+id/cal_button_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:fillViewport="true">
+
+        <com.arachnoid.lutusp.tidepredictor.MyTideGraphicView
+            android:id="@+id/drawing_canvas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:padding="0dp"
+            />
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/cal_button_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:onClick="toggleFullScreen"
+        android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:id="@+id/chart_back_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="chartViewYearLeft"
+            android:backgroundTint="@color/colorButton"
+            android:src="@drawable/ic_action_playback_prev" />
+
+        <ImageButton
+            android:id="@+id/chart_back_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="chartViewMonthLeft"
+            android:backgroundTint="@color/colorButton"
+            android:src="@drawable/ic_action_playback_rew" />
+
+        <ImageButton
+            android:id="@+id/chart_back_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="chartViewDayLeft"
+            android:backgroundTint="@color/colorButton"
+            android:src="@drawable/ic_action_arrow_left" />
+
+        <ImageButton
+            android:id="@+id/chart_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="chartViewHome"
+            android:backgroundTint="@color/colorButton"
+            android:src="@drawable/ic_action_home" />
+
+        <ImageButton
+            android:id="@+id/chart_forw_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="chartViewDayRight"
+            android:backgroundTint="@color/colorButton"
+            android:src="@drawable/ic_action_arrow_right" />
+
+        <ImageButton
+            android:id="@+id/chart_forw_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="chartViewMonthRight"
+            android:backgroundTint="@color/colorButton"
+            android:src="@drawable/ic_action_playback_forw" />
+
+        <ImageButton
+            android:id="@+id/chart_forw_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="chartViewYearRight"
+            android:backgroundTint="@color/colorButton"
+            android:src="@drawable/ic_action_playback_next" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

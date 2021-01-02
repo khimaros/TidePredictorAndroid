@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:padding="0dp"
+    android:background="#e0f0ff"
+    tools:context="com.arachnoid.lutusp.tidepredictor.PlaceHolderFragment">
+
+    <com.arachnoid.lutusp.tidepredictor.MyWebView
+        android:id="@+id/station_list_webview"
+        android:layout_above="@+id/inner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/inner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:onClick="toggleFullScreen"
+        android:layout_centerHorizontal="true"
+         >
+
+
+    <EditText
+        android:id="@+id/search_string"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter search"
+        android:inputType="text"
+        android:maxLines="1"
+        android:imeOptions="actionSearch"
+        android:paddingRight="3dip" />
+
+    <ImageButton
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="webViewSearch"
+        android:backgroundTint="@color/colorButton"
+        android:src="@drawable/ic_action_search" />
+
+    <ImageButton
+        android:id="@+id/left_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="webViewSearchLeft"
+        android:backgroundTint="@color/colorButton"
+        android:src="@drawable/ic_action_arrow_left" />
+
+
+    <ImageButton
+        android:id="@+id/close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="webViewCloseAll"
+        android:backgroundTint="@color/colorButton"
+        android:src="@drawable/ic_action_folder_closed" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- Created on Sep 17, 2017 -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+
+   
+   <div style="display:block;padding-left:1em">
+    <!-- BEGIN data insertion block -->
+
+<!-- END data insertion block -->
+</div>
+      &nbsp;</div> <!-- content -->
+      </div> <!-- wrapper -->
+    <p></p>
+   <script type="text/javascript" language="JavaScript">
+
+document.addEventListener("click",on_click);
+
+function expandCollapseTree(state)
+{
+  var nodes = document.getElementsByTagName('div');
+  var nlen = nodes.length;
+  for(var i = 0;i < nlen;i++) {
+    var cn = nodes[i].className;
+    if((/\bexpf[o|c]\b/i).test(cn)) {
+      set_state(nodes[i],state);
+    }
+  }
+  return false;
+}
+
+// event handler
+
+function set_state(target,state) {
+  var item = target.childNodes;
+  var node = item[1];
+  ncn = (state)?'expco':'expcc';
+  tcn = (state)?'expfo':'expfc';
+  if(node.className != ncn) {
+    node.className = ncn;
+  }
+  if(target.className != tcn) {
+    target.className = tcn;
+  }
+}
+
+function on_click(e) {
+  var evt=e?e:event;
+  var target=evt.target?evt.target:evt.srcElement;
+  var cn = target.className;
+  if(/\bexpf[o|c]\b/i.test(cn)) {
+    var state = (/\bexpfo\b/i.test(cn));
+    set_state(target,!state);
+  }
+}
+function touch_loc(v) {
+  Android.processClick(v);
+}
+
+function getSelection() {
+  Android.jsCallback(window.getSelection());
+  //Android.jsCallback("test string!");
+}
+
+</script>
+<style type="text/css">
+
+body {
+  font-family: Verdana, Tahoma, Helvetica, Arial;
+}
+.expfo,.expfc {
+  cursor:pointer;
+  overflow:hidden;
+  padding:4px; 
+  padding-bottom:8px;
+  font-weight:bold;
+}
+
+.expco,.expcc,.expfo,.expfc,.datum {
+  box-shadow:         0px 0px 16px #aaa;
+  -moz-box-shadow:    0px 0px 16px #aaa;
+  -webkit-box-shadow: 0px 0px 16px #aaa;
+} 
+
+.expco,.expcc {
+  cursor: default;
+}
+
+.expco {
+  margin-left:1em;
+  margin-right:1em;
+}
+
+.expfo,.expfc {
+  text-indent: 4px;
+}
+
+.expfo,div.expfc,div.expco,span {
+  display:block;
+}
+
+.expco,.expcc {
+  font-weight:normal;
+  text-indent:0;
+  margin-top:12px;
+  margin-bottom:12px;
+}
+
+.expfc:hover {
+  background-color:#e0e0e0;
+}
+
+.datum:hover {
+  background-color:#e0f0e0;
+}
+
+.datum {
+  cursor:pointer;
+  display:block;
+  padding:4px;
+  background-color:#fff0e0;
+  margin-bottom:8px;
+}
+
+.expcc {
+  display:none;
+}
+
+.expfo, .expfc  {
+  background-color: #f8f8f8;
+}
+
+</style>
+  <p>&nbsp;</p>
+
+  </body>
+</html>

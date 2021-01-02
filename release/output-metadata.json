@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.arachnoid.lutusp.tidepredictor",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "properties": [],
+      "versionCode": 25,
+      "versionName": "2.5",
+      "enabled": true,
+      "outputFile": "app-release.apk"
+    }
+  ]
+}

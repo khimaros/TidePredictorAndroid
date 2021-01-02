@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e0f0ff"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:padding="0dp"
+    tools:context="com.arachnoid.lutusp.tidepredictor.PlaceHolderFragment">
+
+
+
+<com.arachnoid.lutusp.tidepredictor.CalendarView
+android:id="@+id/calendar_view"
+android:layout_above="@+id/view_button_bar"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    />
+
+
+<LinearLayout
+        android:id="@+id/view_button_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:onClick="toggleFullScreen"
+    android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:id="@+id/cal_back_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="calViewYearLeft"
+            android:backgroundTint="@color/colorButton"
+            android:src="@drawable/ic_action_playback_prev" />
+
+        <ImageButton
+            android:id="@+id/cal_back_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="calViewMonthLeft"
+            android:backgroundTint="@color/colorButton"
+            android:src="@drawable/ic_action_playback_rew" />
+
+        <ImageButton
+            android:id="@+id/cal_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="calViewHome"
+            android:backgroundTint="@color/colorButton"
+            android:src="@drawable/ic_action_home" />
+
+        <ImageButton
+            android:id="@+id/cal_forw_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="calViewMonthRight"
+            android:backgroundTint="@color/colorButton"
+            android:src="@drawable/ic_action_playback_forw" />
+
+        <ImageButton
+            android:id="@+id/cal_forw_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="calViewYearRight"
+            android:backgroundTint="@color/colorButton"
+            android:src="@drawable/ic_action_playback_next" />
+
+
+</LinearLayout>
+</RelativeLayout>

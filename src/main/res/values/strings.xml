@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">TidePredictor</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="infoLink"><a href="http://arachnoid.com/android/TidePredictor">TidePredictor</a> is Copyright 2017, <a href="http://arachnoid.com/administration">P. Lutus</a></string>
+
+    <string-array name="timezone_names">
+        <item>Use System Timezone</item>
+        <item>Use Site Timezone</item>
+        <item>GMT-12</item>
+        <item>GMT-11</item>
+        <item>GMT-10</item>
+        <item>GMT-9</item>
+        <item>GMT-8</item>
+        <item>GMT-7</item>
+        <item>GMT-6</item>
+        <item>GMT-5</item>
+        <item>GMT-4</item>
+        <item>GMT-3</item>
+        <item>GMT-2</item>
+        <item>GMT-1</item>
+        <item>GMT</item>
+        <item>GMT+1</item>
+        <item>GMT+2</item>
+        <item>GMT+3</item>
+        <item>GMT+4</item>
+        <item>GMT+5</item>
+        <item>GMT+6</item>
+        <item>GMT+7</item>
+        <item>GMT+8</item>
+        <item>GMT+9</item>
+        <item>GMT+10</item>
+        <item>GMT+11</item>
+        <item>GMT+12</item>
+    </string-array>
+
+
+</resources>
